@@ -1,0 +1,13 @@
+﻿
+@{
+    ViewData["Title"] = "Form";
+}
+
+<h2>Please fill out this form to count your words</h2>
+<form action="/results" method="post">
+    <label for="word">Choose word to count!</label>
+    <input type="text" name="word" id="word" required />
+    <label for="phrase">Choose a phrase to see how many times the first word appears!</label>
+    <input type="text" name="phrase" id="phrase" required />
+    <button type="submit">Submit</button>
+</form>
