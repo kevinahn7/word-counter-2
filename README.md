@@ -1,12 +1,12 @@
 # Word Counter
 
-#### Epicodus C# Individual Project #1, June 29th, 2018
+#### Epicodus C# Individual Project #2, July 6th, 2018
 
 #### By Kevin Ahn
 
 ## Description
 
-This program takes in a word and a sentence and then returns how many times the first word appeared in the sentence.
+This program takes in a word and a sentence and then returns how many times the first word appeared in the sentence in a web app.
 
 ## Specs
 
@@ -37,7 +37,7 @@ This program takes in a word and a sentence and then returns how many times the 
 
 ## Links
 
-* [The Repository](https://github.com/kevinahn7/word-counter)
+* [The Repository](https://github.com/kevinahn7/word-counter-2)
 
 ## License
 
