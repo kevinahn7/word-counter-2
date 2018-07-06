@@ -1,4 +1,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
+using WordCounter2.Controllers;
 
 namespace WordCounter2.Tests
 {
@@ -6,8 +9,11 @@ namespace WordCounter2.Tests
     public class HomeControllerTest
     {
         [TestMethod]
-        public void TestMethod1()
+        public void Index_ReturnsCorrectView_True()
         {
+            HomeController controller = new HomeController();
+            ActionResult indexView = controller.Index();
+            Assert.IsInstanceOfType(indexView, typeof(ViewResult));
         }
     }
 }
