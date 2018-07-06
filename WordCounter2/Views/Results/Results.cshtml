@@ -5,4 +5,8 @@
 
 <h2>Results</h2>
 
-<p>Your word @Model.GetTheWord() appears exactly @Model.FindTheNumberOfOccurences() times!</p>
+<p>Your word, <span class="makeBold">@Model.GetTheWord()</span>, appears exactly <span class="makeBold">@Model.FindTheNumberOfOccurences()</span> times!</p>
+
+<form action="/form">
+    <button type="submit" class="btn btn-secondary">Try Again</button>
+</form>
