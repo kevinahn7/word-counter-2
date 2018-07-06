@@ -45,5 +45,19 @@ namespace WordCounter2.Tests
             RepeatCounter newGame = new RepeatCounter("test", "hello hello nice to meet you");
             Assert.AreEqual(2, newGame.GetWordsFromArrayDictionary()["hello"]);
         }
+
+        [TestMethod]
+        public void GetNumberOfOccurences_GetsNumberOfOccurences_True()
+        {
+            RepeatCounter newGame = new RepeatCounter("hello", "hello nice to meet you hello");
+            Assert.AreEqual(2, newGame.FindTheNumberOfOccurences());
+        }
+
+        [TestMethod]
+        public void GetNumberOfOccurences_ReturnZeroForNoOccurences_True()
+        {
+            RepeatCounter newGame = new RepeatCounter("bob", "hello nice to meet you");
+            Assert.AreEqual(0, newGame.FindTheNumberOfOccurences());
+        }
     }
 }
