@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace WordCounter
+namespace WordCounter.Models
 {
     public class RepeatCounter
     {
@@ -11,8 +11,8 @@ namespace WordCounter
 
         public RepeatCounter(string word, string phrase)
         {
-            _theWord = word;
-            _arrayOfWords = phrase;
+            HandleFirstWord(word);
+            HandlePhrase(phrase);
         }
 
         public void SetTheWord(string input)
@@ -110,12 +110,6 @@ namespace WordCounter
         {
             SetTheArrayOfWords(phrase);
             SetWordsFromArrayDictionary(GetTheArrayOfWords());
-        }
-
-        public void PlayGame(string word, string phrase)
-        {
-            HandleFirstWord(word);
-            HandlePhrase(phrase);
         }
     }
 }

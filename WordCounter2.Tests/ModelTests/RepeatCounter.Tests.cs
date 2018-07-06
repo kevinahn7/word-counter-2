@@ -1,13 +1,17 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using WordCounter.Models;
 
 namespace WordCounter2.Tests
 {
     [TestClass]
-    public class ResultsControllerTest
+    public class RepeatCounterTests
     {
         [TestMethod]
-        public void TestMethod1()
+        public void GetSetWord_GetsSetsWord_ReturnEqualValue()
         {
+            RepeatCounter test = new RepeatCounter("one", "one two three");
+            string word = test.GetTheWord();
+            Assert.AreEqual(word, "one");
         }
     }
 }

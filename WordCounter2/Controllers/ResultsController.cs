@@ -10,10 +10,17 @@ namespace WordCounter2.Controllers
     public class ResultsController : Controller
     {
         [HttpGet("/results")]
-        public ActionResult Results()
+        public ActionResult Results(string word, string phrase)
         {
-            RepeatCounter newCount = new RepeatCounter();
+            RepeatCounter newCount = new RepeatCounter(word, phrase);
             return View(newCount);
+        }
+
+        [HttpPost("/results")]
+        public ActionResult FilloutForm(string word, string phrase)
+        {
+            RepeatCounter newCount = new RepeatCounter(word, phrase);
+            return View("Results", newCount);
         }
     }
 }
