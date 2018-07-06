@@ -33,7 +33,7 @@ This program takes in a word and a sentence and then returns how many times the 
 
 ## Technologies Used
 
-* .Net Core 1.1.4
+* .Net Core 2.0
 
 ## Links
 
