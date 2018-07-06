@@ -28,7 +28,8 @@ namespace WordCounter.Models
 
         public void SetTheArrayOfWords(string input)
         {
-            _arrayOfWords = input.ToLower().Split(" ");
+            char[] takeOut = { '.', ',', ' ', '"', '-', '!', '@', '#', '$', '%', '^', '&', '(', ')', '?', '*', '_', '+', '`', '~', '/', '\'', '=' };
+            _arrayOfWords = input.ToLower().Split(takeOut);
         }
 
         public string[] GetTheArrayOfWords()
