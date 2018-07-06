@@ -59,5 +59,13 @@ namespace WordCounter2.Tests
             RepeatCounter newGame = new RepeatCounter("bob", "hello nice to meet you");
             Assert.AreEqual(0, newGame.FindTheNumberOfOccurences());
         }
+
+        [TestMethod]
+        public void CheckIfValid_ReturnVailidty_False()
+        {
+            RepeatCounter newGame = new RepeatCounter("bob bob", "hello nice to meet you");
+            bool validity = newGame.GetValidCounter();
+            Assert.AreEqual(false, validity);
+        }
     }
 }
