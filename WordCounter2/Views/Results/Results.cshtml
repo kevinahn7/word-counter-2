@@ -5,7 +5,15 @@
 
 <h2>Results</h2>
 
-<p>Your word, <span class="makeBold">@Model.GetTheWord()</span>, appears exactly <span class="makeBold">@Model.FindTheNumberOfOccurences()</span> times!</p>
+@if (Model.GetValidCounter())
+{
+    <p>Your word, <span class="makeBold">@Model.GetTheWord()</span>, appears exactly <span class="makeBold">@Model.FindTheNumberOfOccurences()</span> times!</p>
+
+}
+else
+{
+    <p>Your word was not a valid word!</p>
+}
 
 <form action="/form">
     <button type="submit" class="btn btn-secondary">Try Again</button>

@@ -8,6 +8,7 @@ namespace WordCounter.Models
         private string _theWord;
         private string[] _arrayOfWords;
         private Dictionary<string, int> _WordsFromArrayDictionary = new Dictionary<string, int>() { };
+        private bool _validCounter;
 
         public RepeatCounter(string word, string phrase)
         {
@@ -35,6 +36,11 @@ namespace WordCounter.Models
             return _arrayOfWords;
         }
 
+        public bool GetValidCounter()
+        {
+            return _validCounter;
+        }
+
         public void SetWordsFromArrayDictionary(string[] input)
         {
             for (int i = 0; i < input.Length; i++)
@@ -54,8 +60,13 @@ namespace WordCounter.Models
         {
             string input = word;
             if (input.Split(" ").Length == 1)
-            { 
+            {
+                _validCounter = true;
                 SetTheWord(input);
+            }
+            else
+            {
+                _validCounter = false;
             }
         }
 
