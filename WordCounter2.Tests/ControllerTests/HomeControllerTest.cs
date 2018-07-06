@@ -15,5 +15,13 @@ namespace WordCounter2.Tests
             ActionResult indexView = controller.Index();
             Assert.IsInstanceOfType(indexView, typeof(ViewResult));
         }
+
+        [TestMethod]
+        public void Form_ReturnsCorrectView_True()
+        {
+            HomeController controller = new HomeController();
+            ActionResult indexView = controller.Form();
+            Assert.IsInstanceOfType(indexView, typeof(ViewResult));
+        }
     }
 }
