@@ -23,5 +23,27 @@ namespace WordCounter2.Tests
             string[] testPhraseArray = testPhrase.Split(' ');
             CollectionAssert.AreEqual(phrase, testPhraseArray);
         }
+
+        [TestMethod]
+        public void GetSetTheArrayOfWordsRegardlessOfCase_GetsSetsTheArrayOfWordRegardlessOfCase_True()
+        {
+            RepeatCounter newGame = new RepeatCounter("test", "Hello nice to meet you");
+            string[] NewWords = { "hello", "nice", "to", "meet", "you" };
+            CollectionAssert.AreEqual(NewWords, newGame.GetTheArrayOfWords());
+        }
+
+        [TestMethod]
+        public void GetSetWordsFromArrayDictionary_GetsSetsWordsFromArrayDictionary_True()
+        {
+            RepeatCounter newGame = new RepeatCounter("hello", "hello nice to meet you");
+            Assert.AreEqual(1, newGame.GetWordsFromArrayDictionary()["hello"]);
+        }
+
+        [TestMethod]
+        public void GetSetWordsFromArrayDictionaryMultiple_GetsSetsWordsFromArrayDictionaryMultiple_True()
+        {
+            RepeatCounter newGame = new RepeatCounter("test", "hello hello nice to meet you");
+            Assert.AreEqual(2, newGame.GetWordsFromArrayDictionary()["hello"]);
+        }
     }
 }

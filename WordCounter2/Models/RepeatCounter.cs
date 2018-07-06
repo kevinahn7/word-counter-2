@@ -76,31 +76,6 @@ namespace WordCounter.Models
             }
         }
 
-        public void GetResponse()
-        {
-            string response = Console.ReadLine();
-            string responseLower = response.ToLower();
-            if (responseLower == "y" || responseLower == "yes")
-            {
-                GetWordsFromArrayDictionary().Clear();
-            }
-            if (responseLower == "n" || responseLower == "no")
-            {
-                Console.WriteLine();
-            }
-            else
-            {
-                Console.WriteLine("That was not a valid response");
-                AskIfDone();
-            }
-        }
-
-        public void AskIfDone()
-        {
-            Console.WriteLine("Would you like to play again? [Y/N]");
-            GetResponse();
-        }
-
         public void HandleFirstWord(string word)
         {
             CheckIfValidWord(word);
